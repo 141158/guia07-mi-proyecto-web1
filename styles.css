@@ -1,27 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f8ff;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #e8f4ff 0%, #ffffff 100%);
+  color: #1f2937;
+  min-height: 100vh;
+}
+
+.hero {
+  background: linear-gradient(135deg, #2f80ed, #56ccf2);
+  color: white;
+  padding: 40px 20px;
   text-align: center;
-  margin-top: 50px;
 }
 
-h1 {
-  color: #2c3e50;
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-input {
-  padding: 8px;
-  margin: 10px;
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.hero p {
+  margin: 16px auto 24px;
+  max-width: 640px;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #1d4ed8;
+}
+
+label {
+  display: block;
+  margin: 14px 0 6px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.16);
 }
 
 button {
-  padding: 8px 15px;
-  background-color: #3498db;
-  color: white;
+  margin-top: 18px;
+  padding: 14px 22px;
   border: none;
+  border-radius: 999px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1rem;
   cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+button#temaBtn {
+  background-color: rgba(255, 255, 255, 0.17);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+button#temaBtn:hover {
+  background-color: rgba(255, 255, 255, 0.26);
+}
+
+.mensaje {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  display: inline-block;
+  min-height: 42px;
+}
+
+.mensaje.error {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.mensaje.success {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.footer {
+  text-align: center;
+  padding: 16px 20px 40px;
+  color: #475569;
+}
+
+.dark-mode body,
+.dark-mode {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.dark-mode .hero {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.dark-mode .card {
+  background: #111827;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.55);
+}
+
+.dark-mode input,
+.dark-mode textarea {
+  background: #1f2937;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+.dark-mode input:focus,
+.dark-mode textarea:focus {
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.24);
+}
+
+.dark-mode button {
+  background-color: #2563eb;
+}
+
+.dark-mode .footer {
+  color: #cbd5e1;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
 }

@@ -7,15 +7,40 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Bienvenido a mi Página Web (primer commit)</h1>
-  <p>Este proyecto fue publicado usando GitHub.</p>
-  <input type="text" id="nombre" placeholder="Escribe tu nombre">
-  <button onclick="saludar()">Saludar</button>
-  <p id="resultado"></p>
-  <h2>Formulario de contacto</h2>
-  <input type="email" id="correo" placeholder="Ingrese su correo">
-  <button onclick="validarCorreo()">Validar correo</button>
-  <p id="mensajeCorreo"></p>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Mi Proyecto Web</h1>
+      <p>Ejemplo de evolución controlada con HTML, CSS y JavaScript.</p>
+      <button id="temaBtn" type="button">Cambiar tema</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Bienvenida interactiva</h2>
+      <p>Introduce tu nombre y recibe un saludo dinámico.</p>
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" placeholder="Escribe tu nombre">
+      <button id="saludarBtn" type="button">Saludar</button>
+      <p id="resultado" class="mensaje"></p>
+    </section>
+
+    <section class="card">
+      <h2>Formulario de contacto</h2>
+      <p>Completa los campos para validar el contacto.</p>
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" placeholder="ejemplo@dominio.com">
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
+      <button id="validarBtn" type="button">Validar formulario</button>
+      <p id="mensajeCorreo" class="mensaje"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Proyecto desarrollado con Git y GitHub para mostrar evolución de versiones.</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
